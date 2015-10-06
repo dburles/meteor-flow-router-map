@@ -33,7 +33,7 @@ FlowRouter.map(route => {
 
 flow-router-map works well with Flow Router route groups.
 
-```
+```js
 Routes = {
   home: {
     name: 'home',
