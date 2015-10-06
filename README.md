@@ -51,10 +51,11 @@ Routes = {
   }
 };
 
-RouteGroups = {};
-RouteGroups.admin = FlowRouter.group({
-  prefix: '/admin'
-});
+RouteGroups = {
+  admin: FlowRouter.group({
+    prefix: '/admin'
+  })
+};
 
 FlowRouter.map(route => {
   route('/', Routes.home);
