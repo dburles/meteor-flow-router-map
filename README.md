@@ -8,11 +8,59 @@ Provides a nice routing API for FlowRouter.
 $ meteor add dburles:flow-router-map
 ```
 
-## Usage
+## API
 
-TODO.
+FlowRouter.map(path, options, [group])
 
-(For now see tests)
+## Basic Usage
+
+```js
+Routes = {
+  home: {
+    name: 'home',
+    render() {
+      // ...
+    }
+  }
+};
+
+FlowRouter.map(route => {
+  route('/', Routes.home);
+});
+```
+
+## Route Groups
+
+flow-router-map works well with Flow Router route groups.
+
+```
+Routes = {
+  home: {
+    name: 'home',
+    render() {
+      // ...
+    }
+  },
+  admin: {
+    home: {
+      name: 'adminHome',
+      render() {
+        // ...
+      }
+    }
+  }
+};
+
+RouteGroups = {};
+RouteGroups.admin = FlowRouter.group({
+  prefix: '/admin'
+});
+
+FlowRouter.map(route => {
+  route('/', Routes.home);
+  route('/', Routes.admin.home, RouteGroups.admin);
+});
+```
 
 ### License
 
