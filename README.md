@@ -12,6 +12,26 @@ $ meteor add dburles:flow-router-map
 
 FlowRouter.map(path, options, [group])
 
+## Example
+
+```js
+FlowRouter.map(route => {
+  // Base
+  route('/', Routes.home);
+  route('/about', Routes.about);
+  route('/contact', Routes.contact);
+
+  // Products
+  route('/', Routes.products.home, RouteGroups.products);
+  route('/view/:slug', Routes.products.view, RouteGroups.products);
+  route('/category/:slug', Routes.products.category, RouteGroups.products);
+
+  // Admin
+  route('/', Routes.admin.home, RouteGroups.admin);
+  /// ... etc
+});
+```
+
 ## Basic Usage
 
 ```js
