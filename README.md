@@ -10,7 +10,7 @@ $ meteor add dburles:flow-router-map
 
 ## API
 
-FlowRouter.map(path, options, [group])
+`route(path, options, [group])`
 
 ## Example
 
