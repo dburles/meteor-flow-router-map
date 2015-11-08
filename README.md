@@ -38,7 +38,7 @@ FlowRouter.map(route => {
 Routes = {
   home: {
     name: 'home',
-    render() {
+    action() {
       // ...
     }
   }
@@ -57,14 +57,14 @@ flow-router-map works well with Flow Router route groups.
 Routes = {
   home: {
     name: 'home',
-    render() {
+    action() {
       // ...
     }
   },
   admin: {
     home: {
       name: 'adminHome',
-      render() {
+      action() {
         // ...
       }
     }
