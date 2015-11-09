@@ -1,6 +1,6 @@
 # Flow Router Map
 
-Provides a nice routing API for FlowRouter.
+Provides a nice routing API for FlowRouter. Inspired by [Django urls](https://docs.djangoproject.com/en/1.8/topics/http/urls/#example) flow-router-map is designed to keep all of your url paths in the one place so you gain a clear visual overview of your entire application's routes. See the example below.
 
 ## Installation
 
@@ -10,7 +10,9 @@ $ meteor add dburles:flow-router-map
 
 ## API
 
-`route(path, options, [group])`
+```
+route(path, options, [group])
+```
 
 ## Example
 
@@ -28,7 +30,7 @@ FlowRouter.map(route => {
 
   // Admin
   route('/', Routes.admin.home, RouteGroups.admin);
-  /// ... etc
+  // ... etc
 });
 ```
 
